@@ -8,7 +8,7 @@ class CookieModel(db.Model):
     name = db.Column(db.String(200))
     price = db.Column(db.Float(precision = 2))
 
-    #receipt = db.relationship("ReceiptModel", lazy = "dynamic")
+    sale = db.relationship("SaleModel", lazy = "dynamic")
 
     def __init__(self, name, price):
         self.name = name

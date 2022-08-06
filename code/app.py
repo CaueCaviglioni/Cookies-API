@@ -7,6 +7,7 @@ from database_conn import secrets
 
 from resources.cookie import Cookie, CookieList
 from resources.customer import Customer, CustomerList
+from resources.sale import Sale, SaleList
 #from resources.user import UserLogin, TokenRefresh
 from db import db
 
@@ -33,8 +34,10 @@ def create_tables():
 
 api.add_resource(CookieList, "/cookies")
 api.add_resource(CustomerList, "/customers")
+api.add_resource(SaleList, "/sales")
 api.add_resource(Cookie, "/cookies/<string:name>")
 api.add_resource(Customer, "/customers/<string:uuid_customer>")
+api.add_resource(Sale, "/sales/<string:uuid_sale>")
 #api.add_resource(UserLogin, "/login")
 #api.add_resource(TokenRefresh, "/refresh")
 

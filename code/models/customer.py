@@ -11,7 +11,7 @@ class CustomerModel(db.Model):
     email = db.Column(db.String(200))
     is_vip = db.Column(db.String(100))
 
-    #receipt = db.relationship("ReceiptModel", lazy = "dynamic")
+    sale = db.relationship("SaleModel", lazy = "dynamic")
 
     def __init__(self, uuid_customer, name, telephone, email, is_vip):
         self.uuid_customer = uuid_customer
